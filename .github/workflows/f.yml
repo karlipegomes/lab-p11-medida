@@ -1,0 +1,7 @@
+name: f
+on: push
+jobs:
+  testar:
+    runs-on: runner-que-nao-existe
+    steps:
+      - run: echo oi
