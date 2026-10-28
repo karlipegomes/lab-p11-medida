@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Mostrar a versão
-        run: echo "::notice::versão p11-6c8924a2"
+        run: echo "::notice::versão p11-e4fb22b9"
