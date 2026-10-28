@@ -1,16 +1,14 @@
-name: alt
-on: [push, pull_request, workflow_dispatch]
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
-  primeiro:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo antes
   versao:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - run: |
-          v=$(< VERSAO)
-          echo "versao lida: $v"
-      - run: |
-          echo "::notice title=versao::$(< VERSAO)"
+      - name: Mostrar a versão
+        run: echo "::notice::versão $(cat VERSAO)"
+      - run: exit 1
