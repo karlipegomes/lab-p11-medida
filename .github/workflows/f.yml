@@ -1,0 +1,8 @@
+name: f
+on: push
+jobs:
+  testar:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo oi
+        uses: actions/checkout@v4
