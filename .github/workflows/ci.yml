@@ -10,4 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Mostrar a versão
-        run: echo "::notice::versão p11-6c8924a2"
+        run: echo nada
+      - if: github.event_name == 'push'
+        run: echo "::notice::p11-0d343eff"
+      - if: github.event_name == 'pull_request'
+        run: echo "::notice::p11-9f799587"
