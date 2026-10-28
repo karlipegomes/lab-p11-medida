@@ -1,0 +1,12 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  versao:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "versao $(cat VERSAO)"; echo "::notice::versao $(cat VERSAO)"
